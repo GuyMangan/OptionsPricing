@@ -6,8 +6,6 @@ A Python library for pricing European options using three classical quantitative
 - Binomial Tree Model
 - Monte Carlo Simulation (Geometric Brownian Motion)
 
-This project is designed to be lightweight, modular, and educational — ideal for quant internship preparation, financial engineering practice, or use as a starting point for further research.
-
 ## Repository Structure
 
 ```
