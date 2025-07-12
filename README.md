@@ -1,6 +1,6 @@
 # OptionsPricing
 
-A Python library for pricing European options using three classical quantitative models:
+A Python library for pricing European options using three classical quantitative models, and calculating their greeks using Black Scholes:
 
 - Black-Scholes Formula (Analytical)
 - Binomial Tree Model
