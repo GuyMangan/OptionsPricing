@@ -14,11 +14,16 @@ OptionsPricing/
 │   ├── black_scholes.py         # Black-Scholes (analytical)
 │   ├── binomial_tree.py         # Binomial Tree
 │   └── monte_carlo.py           # Monte Carlo (GBM)
+|
+├── greeks/
+│   └── bs_greeks.py              # Black-Scholes Greeks (analytical)
 │
 ├── test_notebook/               # Interactive tests & examples
 │   └── OptionsPricing.ipynb     # Jupyter notebook for model usage
 │
-└── README.md                    # Project overview
+├── .gitignore                    # Git ignore file
+├── LICENSE                       # MIT License
+└── README.md                     # Project overview
 ```
 
 ## Quick Start
@@ -56,6 +61,12 @@ print(f"Binomial Tree Put: {bt_price:.4f}")
 # Monte Carlo Call Option
 mc_price = monte_carlo_call(S0=100, K=100, T=1.0, r=0.05, sigma=0.2, M=10000)
 print(f"Monte Carlo Call: {mc_price:.4f}")
+
+# Calculate Greeks for the Black-Scholes Call
+greeks = calculate_greeks(S0=100, K=100, T=1.0, r=0.05, sigma=0.2, option_type='call')
+print("\nBlack-Scholes Greeks:")
+for greek, value in greeks.items():
+    print(f"  {greek.capitalize():<6}: {value:.4f}")
 ```
 
 You can also run and modify examples in the included [Jupyter notebook](https://github.com/GuyMangan/OptionsPricing/blob/main/test_notebook/OptionsPricing.ipynb).
