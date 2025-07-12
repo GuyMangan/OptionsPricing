@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+#-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-#
+# Mac / Windows specific
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-#
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
