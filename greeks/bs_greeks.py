@@ -30,7 +30,7 @@ def bs_greeks(
     
     Note: 252 in theta formula is number of trading days in a year. Makes theta = change in option price per one trading day"""
     
-    d1 = (np.log(S0/K)+(r+((sigma**2)/2))*T)/(sigma*np.sqrt(T))
+    d1 = (np.log(S/K)+(r+((sigma**2)/2))*T)/(sigma*np.sqrt(T))
     d2 = d1 - (sigma*np.sqrt(T))
     
     pdf_d1 = np.exp(-0.5 * d1**2) / np.sqrt(2 * np.pi) #probability density function (1st derivative)

@@ -1,5 +1,4 @@
 # options_pricing/binomial_tree.py
-# Could not swap to math as np.zeros and np.maximum were needed
 import numpy as np
 
 
@@ -12,7 +11,7 @@ def binomial_tree_call(
     N: int = 10000
 ) -> float:
     """
-    Calculates the European call option price using the Binomial Tree model.
+    Calculates the price of a European call option using the Binomial Tree model.
 
     Inputs:
         S0 (float):    Initial stock price.
@@ -61,7 +60,7 @@ def binomial_tree_put(
     N: int = 10000
 ) -> float:
     """
-    Calculates the European put option price using the Binomial Tree model.
+    Calculates the price of a European put option using the Binomial Tree model.
 
     Inputs:
         S0 (float):    Initial stock price.

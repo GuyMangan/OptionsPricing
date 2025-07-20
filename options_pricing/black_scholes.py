@@ -1,5 +1,5 @@
 # options_pricing/black_scholes.py
-# replaced numpy with math (more lightweight import)
+
 import math
 
 from scipy.stats import norm
@@ -13,7 +13,7 @@ def black_scholes_call(
     sigma: float
 ) -> float:
     """
-    Compute the Black–Scholes price of a European call option.
+    Calculates the price of a European call option using the Black-Scholes model.
 
     Inputs:
         S0 (float):    Current stock price.
@@ -51,7 +51,7 @@ def black_scholes_put(
     sigma: float
 ) -> float:
     """
-    Compute the Black–Scholes price of a European put option.
+    Calculates the price of a European put option using the Black-Scholes model.
 
     Inputs:
         S0 (float):    Current stock price.

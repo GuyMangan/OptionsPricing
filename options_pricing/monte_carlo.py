@@ -1,3 +1,6 @@
+# options_pricing/monte_carlo.py
+
+import numpy as np
 def monte_carlo_call(
     S0: float,
     K: float,
@@ -23,10 +26,10 @@ def monte_carlo_call(
     """
 
     Z = np.random.standard_normal(M) #M random numbers (on a normal distribution)
-    ST = S0 * np.exp((r - 0.5 * sigma**2) * T + sigma * math.sqrt(T) * Z) #analytic solution of GBM (https://en.wikipedia.org/wiki/Geometric_Brownian_motion)
+    ST = S0 * np.exp((r - 0.5 * sigma**2) * T + sigma * np.sqrt(T) * Z) #analytic solution of GBM (https://en.wikipedia.org/wiki/Geometric_Brownian_motion)
     payoffs = np.maximum(ST - K, 0.0)
     expected_payoff = np.mean(payoffs)
-    return expected_payoff * math.exp(-r * T) #discounting by risk free rate
+    return expected_payoff * np.exp(-r * T) #discounting by risk free rate
 
 def analytic_monte_carlo_put(
     S0: float,
@@ -53,7 +56,7 @@ def analytic_monte_carlo_put(
     """
 
     Z = np.random.standard_normal(M) #M random numbers (on a normal distribution)
-    ST = S0 * np.exp((r - 0.5 * sigma**2) * T + sigma * math.sqrt(T) * Z) #analytic solution of GBM (https://en.wikipedia.org/wiki/Geometric_Brownian_motion)
+    ST = S0 * np.exp((r - 0.5 * sigma**2) * T + sigma * np.sqrt(T) * Z) #analytic solution of GBM (https://en.wikipedia.org/wiki/Geometric_Brownian_motion)
     payoffs = np.maximum(K - ST, 0.0)
     expected_payoff = np.mean(payoffs)
-    return expected_payoff * math.exp(-r * T) #discounting by risk free rate
+    return expected_payoff * np.exp(-r * T) #discounting by risk free rate
