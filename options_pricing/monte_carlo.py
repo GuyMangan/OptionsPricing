@@ -10,8 +10,9 @@ def monte_carlo_call(
     M: int = 10000
 ) -> float:
     """
-    Calculates call price of an European Option using a Monte Carlo Simulation
-    using the (risk-neutral) Black Scholes Options pricing model (risk-neutral Geometric Brownian Motion (analytic solution)).
+    Calculates the price of a European call option
+    using the (risk-neutral) Black Scholes Options pricing model
+    (risk-neutral Geometric Brownian Motion (analytic solution)).
 
     Inputs:
         S0 (float):    Initial stock price.
@@ -40,8 +41,9 @@ def analytic_monte_carlo_put(
     M: int = 10000
 ) -> float:
     """
-    Calculates put price of an European Option using a Monte Carlo Simulation
-    using the (risk-neutral) Black Scholes Options pricing model (risk-neutral Geometric Brownian Motion (analytic solution)).
+    Calculates the price of a European put option
+    using the (risk-neutral) Black Scholes Options pricing model
+    (risk-neutral Geometric Brownian Motion (analytic solution)).
 
     Inputs:
         S0 (float):    Initial stock price.
